@@ -63,6 +63,14 @@ public class AnagramGeneratorTest {
     }
 
     @Test
+    public void testNullInput() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            AnagramGenerator.generateAnagrams(null);
+        });
+        assertEquals("Input must be a non-empty string.", exception.getMessage());
+    }
+
+    @Test
     public void testInvalidCharacters() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             AnagramGenerator.generateAnagrams("a1b");

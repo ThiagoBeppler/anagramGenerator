@@ -18,7 +18,7 @@ public class AnagramGeneratorTest {
     }
 
     @Test
-    public void fourThreeLetters() {
+    public void testFourLetters() {
         List<String> result = AnagramGenerator.generateAnagrams("abcd");
         assertEquals(24, result.size());
         assertTrue(result.contains("abcd"));
